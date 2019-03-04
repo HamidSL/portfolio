@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400, 500,700|Open+Sans:400, 500,700|Merriweather:700");
+:root {
+  --primary: #f2f3d9;
+  --secondary: #030027;
+  --primary-dark: #848577;
+  --secondary-dark: #757389;
+  --neutral-grey: #cbc9c5;
+  --body-bg: #f5faff;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #f5faff;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 100%;
+  min-height: 100%;
+}
+
+.container .table-container{
+  background: #fff;
+  height: 100%;
+  width: 90%;
+  margin: 3rem auto;
+  border: solid 2px rgba(0, 0, 0, 0.125);
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.table-container table{
+  width: 100%;
+  text-align: left;
+  border: solid 1px #cbc9c5;
+  border-collapse: collapse;
+}
+
+.table-container table > thead{
+  background: #030027;
+  color: #f2f3d9;
+  text-align: center;
+
+}
+
+.table-container table > thead > tr > th{
+  padding: 0.5rem 0.25rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  border-right: solid 2px #e4e6b7;
+}
+
+.table-container table > tbody > tr > td{
+  padding: 0.8rem 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 0.8rem;
+  border-right: solid 2px #e4e6b7;
+  line-height: 1.25rem;
+}
+
+.table-container table > tbody > tr:nth-child(even){
+  background: #e4e6b7;
+}
