@@ -67,8 +67,63 @@ body{
   font-size: 0.8rem;
   border-right: solid 2px #e4e6b7;
   line-height: 1.25rem;
+
 }
 
 .table-container table > tbody > tr:nth-child(even){
   background: #e4e6b7;
+}
+
+.table-container table > tbody > tr > td > div{
+  width: 90%;
+  border: solid 1px #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.125);
+  background: #ffffff;
+  margin: 0 auto;
+  display: flex;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  flex-direction: column;
+  }
+
+  .table-container table > tbody > tr > td > div > div:first-child{
+    align-self: flex-end;
+     }
+
+
+  .table-container table > tbody > tr > td > div > div:last-child{
+   display: flex;
+   line-height: 1.8rem;
+   color: #030027;
+    }
+
+.table-container table > tbody > tr > td > div > div:last-child > .left{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.table-container table > tbody > tr > td > div > div:last-child > .right{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-container table > tbody > tr > td > div > div:last-child .inner{
+  display: flex;
+
+}
+
+.table-container table > tbody > tr > td > div > div:last-child .inner > .left{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: #757389;
+}
+
+.table-container table > tbody > tr > td > div > div:last-child .inner > .right{
+  display: flex;
+  flex-direction: column;
+  flex: 3;
 }
