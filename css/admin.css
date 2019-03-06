@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400, 500,700|Open+Sans:400, 500,700|Merriweather:700");
+:root {
+  --primary: #f2f3d9;
+  --secondary: #030027;
+  --primary-dark: #848577;
+  --secondary-dark: #757389;
+  --neutral-grey: #cbc9c5;
+}
+
+a{
+  text-decoration: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  max-width: 100%;
+  min-height: 100%;
+  background: #f5faff;
+}
+
+.container{
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container > h3{
+  margin: 3rem 0 1.5rem 0;
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 0.2rem;
+  text-align: center;
+  font-family: "Merriweather", sans-serif;
+  letter-spacing: 0.05rem;
+}
+.container > h3 > span:first-child{
+  border: solid 2px #283618;
+  color: #030027;
+  padding: 0 0.1rem;
+  margin: 0 0.1rem 0 0;
+}
+
+.container > h3 > span:last-child{
+  color: #848577;
+  text-transform: lowercase;
+}
+
+.container .form-container{
+  width: 25%;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  background: #030027;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.form-container .form-inner{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  background: #f2f3d9;
+  margin-left: -3rem;
+  border: solid 1px rgba(0, 0, 0, 0.125);
+}
+
+.form-inner > h3{
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  font-size: 1.5rem;
+  font-family: "Open Sans",sans-serif;
+  padding: 0.25rem 0;
+  margin: 0.25rem 0 1rem 0;
+  border-bottom: solid #cbc9c5 1px;
+}
+.form-inner > form{
+  display: flex;
+  flex-direction: column;
+}
+.form-inner > form .form-group{
+  display: flex;
+  flex-direction: column;
+  margin: 0.1rem 0;
+  line-height: 1.8rem;
+}
+
+.form-inner > form .form-group > label{
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  letter-spacing: 0.03rem;
+  color: #757389;
+}
+
+.form-inner > form  .form-group > input{
+  border: none;
+  border-bottom: solid 1px #cbc9c5;
+  background: transparent;
+  font-size: 0.9rem;
+  padding: 0.1rem 0;
+  
+}
+
+.form-inner > form  .form-group > input:focus{
+  outline: none;
+  border-bottom-color: #030027;
+  
+}
+
+.form-inner > form > button{
+  margin: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  background: transparent;
+  border: solid 1px #030027;
+  color: #030027;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.01rem;
+  font-family: 'Open Sans',sans-serif;
+}
+
+.form-inner > form > button:hover{
+  color: #f2f3d9;
+  background: #030027;
+}
+
+.form-inner > form > h6 > a{
+  letter-spacing: 0.03rem;
+  color: #848577;
+}
+
+.form-inner > form > h6 > a:hover{
+  color: #030027;
+}

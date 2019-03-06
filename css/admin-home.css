@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400, 500,700|Open+Sans:400, 500,700|Merriweather:700, 400");
+:root {
+  --primary: #f2f3d9;
+  --secondary: #030027;
+  --primary-dark: #848577;
+  --secondary-dark: #757389;
+  --neutral-grey: #cbc9c5;
+  --body-bg: #f5faff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100%;
+  background: var(--body-bg);
+  font-family: "Raleway", sans-serif;
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(3, 0, 39, 0.3);
+  overflow-y: auto;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  display: none;
+  animation: unravel 0.8s ease-in;
+}
+
+.modal .modal-dialog {
+  width: 60%;
+  min-height: 60%;
+  background: var(--primary);
+  border-radius: 0.25rem;
+  margin: 2rem auto;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.modal .modal-dialog > span {
+  float: right;
+  padding: 0.2rem;
+  cursor: pointer;
+  color: var(--secondary-dark);
+  border-radius: 3rem;
+}
+
+.modal .modal-dialog > span:hover,
+.modal .modal-dialog > span:focus {
+  color: var(--secondary);
+}
+.modal .modal-dialog .modal-body {
+  width: 100%;
+  height: 100%;
+  border: solid 1px var(--neutral-grey);
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.7rem;
+  border-radius: 0.25rem;
+}
+
+.modal-dialog .modal-body > form {
+  display: flex;
+}
+
+.modal-dialog .modal-body > form .form-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.5rem;
+}
+
+.modal-dialog .modal-body > form > .original {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: solid 1px var(--neutral-grey);
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.modal-dialog .modal-body > form > .custom {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body > form > .custom > .form-group > span {
+  line-height: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* edit repo heading edit */
+.modal-dialog .modal-body > h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.025rem;
+  font-size: 1.7rem;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  border-bottom: solid 1px var(--neutral-grey);
+  display: block;
+  text-align: center;
+  font-family: "Merriweather", sans-serif;
+  color: var(--secondary);
+}
+
+/* Edit custom and original headings */
+.modal-dialog .modal-body > form h5 {
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  font-size: 1rem;
+  border-bottom: solid 1px var(--neutral-grey);
+  color: var(--secondary);
+}
+
+/* Labels design */
+.modal-dialog .modal-body > form .form-group label {
+  text-transform: capitalize;
+  font-size: 0.85rem;
+  color: var(--secondary-dark);
+  letter-spacing: 0.05rem;
+}
+
+/* Modal Styling End */
+/* Utility Classes */
+.form-control {
+  background: transparent;
+  border: solid 1px var(--neutral-grey);
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.25rem;
+  font-size: 0.85rem;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  padding: 0.8rem 0.4rem;
+  margin: 0.75rem 0;
+  letter-spacing: 0.025rem;
+  font-family: "Merriweather", sans-serif;
+  font-size: 0.875rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  border: solid 1px var(--secondary-dark);
+}
+
+.btn-primary:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+textarea {
+  resize: none;
+  font-family: "Raleway", sans-serif;
+}
+
+.alert {
+  border-left: solid 5px var(--neutral-grey);
+  box-sizing: border-box;
+  padding: 1rem 0.25rem;
+  font-size: 0.8rem;
+  color: var(--secondary);
+  background: white;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
+  line-height: 1.5rem;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04rem;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 400;
+  color: var(--secondary-dark);
+}
+
+.alert > .fa-check {
+  padding: 0.3rem;
+  border: solid 1px;
+  margin: 0 0.5rem;
+  border-radius: 100%;
+}
+.alert-success > .fa-check {
+  background: #008000;
+  color: var(--primary);
+}
+
+.alert-success {
+  border-color: #008000;
+}
+
+.alert-danger > .fa-check {
+  background: #ff0000;
+  color: var(--primary);
+}
+
+.alert-danger {
+  border-color: #ff0000;
+}
+
+.active {
+  display: block;
+}
+
+/* Keyframes */
+@keyframes unravel {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

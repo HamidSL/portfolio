@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/admin-home.css" />
+    <title>Margai Wangara | Dashboard</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <nav class="navbar">
+          <a href="#" class="navbar-brand">
+            <span>m<span></span>argai.</span>
+          </a>
+        </nav>
+      </header>
+    </div>
+    <div class="modal">
+      <div class="modal-dialog">
+        <span class="close">
+          <i class="fas fa-times"></i>
+        </span>
+
+        <div class="modal-body">
+          <h3>edit repo</h3>
+          <form action="#">
+            <div class="original">
+              <h5>original</h5>
+              <div class="form-group">
+                <label for="name">name</label>
+                <input type="text" class="form-control" name="name" />
+              </div>
+              <div class="form-group">
+                <label for="language">language</label>
+                <input
+                  placeholder="Language"
+                  type="text"
+                  class="form-control"
+                  name="language"
+                />
+              </div>
+              <div class="form-group">
+                <label for="custom-description">description</label>
+                <textarea
+                  name="description"
+                  cols="30"
+                  rows="5"
+                  class="form-control"
+                ></textarea>
+              </div>
+            </div>
+            <div class="custom">
+              <h5>custom</h5>
+              <div class="form-group">
+                <label for="custom-name">name</label>
+                <input type="text" class="form-control" name="custom-name" />
+              </div>
+              <div class="form-group">
+                <label for="custom-language">language</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="custom-language"
+                />
+              </div>
+              <div class="form-group">
+                <label for="custom-description">description</label>
+                <textarea
+                  name="description"
+                  cols="30"
+                  rows="5"
+                  placeholder="Description"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="featured">featured</label>
+                <span>
+                  <label for="yes">
+                    <input type="radio" name="featured" checked /> yes
+                  </label>
+                  <label for="no">
+                    <input type="radio" name="featured" /> no
+                  </label>
+                </span>
+              </div>
+              <div class="alert alert-danger">
+                <i class="fas fa-check"></i>
+                this is an alert box
+              </div>
+              <button type="submit" class="btn btn-primary">submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Javascript -->
+    <script src="../js/admin.js"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+      integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
