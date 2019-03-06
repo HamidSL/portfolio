@@ -19,7 +19,191 @@ body {
   background: var(--body-bg);
   font-family: "Raleway", sans-serif;
 }
+a {
+  text-decoration: none;
+}
+/* Main page Styling */
+#wrapper {
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
+#wrapper nav {
+  width: 100%;
+  min-height: 4.5rem;
+  background: var(--secondary);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+#wrapper nav .navbar-brand {
+  font-size: 1.9rem;
+  color: var(--primary);
+  font-family: "Merriweather", serif;
+  text-transform: capitalize;
+  letter-spacing: 0.05rem;
+}
+
+#wrapper nav .navbar-brand > span > span:first-child {
+  border: solid 2px;
+  padding: 0.2rem;
+  font-weight: 700;
+  margin: 0 0.2rem;
+}
+
+#wrapper nav .navbar-brand > span > span:last-child {
+  color: var(--primary-dark);
+}
+
+#content {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#content .content-inner {
+  width: 80%;
+  margin: 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+#content .content-inner .content-top {
+  display: flex;
+  flex-direction: column;
+}
+
+#content .content-inner .content-top h3 {
+  text-transform: capitalize;
+  letter-spacing: 0.03rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#content .content-inner .content-top > ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  grid-column-gap: 1rem;
+  margin: 1rem 0;
+}
+
+#content .content-inner .content-top > ul > li > a {
+  text-transform: capitalize;
+  border-bottom: solid 2px var(--neutral-grey);
+  display: block;
+  color: var(--neutral-grey);
+}
+
+#content .content-inner .content-top > ul > li > a:hover {
+  color: var(--secondary);
+  border-bottom-color: var(--secondary);
+}
+
+/* Table Section Styling */
+#content .content-inner .content-bottom {
+  width: 100%;
+}
+
+#content .content-inner .content-bottom .table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#content .content-inner .content-bottom .table-responsive .table > thead {
+  background: var(--secondary);
+  text-align: center;
+}
+
+#content
+  .content-inner
+  .content-bottom
+  .table-responsive
+  .table
+  > thead
+  > tr
+  > th {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+#content
+  .content-inner
+  .content-bottom
+  .table-responsive
+  .table
+  > tbody
+  > tr
+  > td {
+  color: var(--secondary-dark);
+  padding: 1rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+#content
+  .content-inner
+  .content-bottom
+  .table-responsive
+  .table
+  > tbody
+  > tr
+  > td:first-child
+  > a {
+  color: var(--secondary-dark);
+}
+
+#content
+  .content-inner
+  .content-bottom
+  .table-responsive
+  .table
+  > tbody
+  > tr
+  > td:first-child
+  > a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+#content
+  .content-inner
+  .content-bottom
+  .table-responsive
+  .table
+  > tbody
+  > tr
+  > td {
+  text-transform: capitalize;
+}
+
+.content-bottom .table-responsive .table > tbody > tr > td > span {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  display: flex;
+}
+
+.content-bottom .table-responsive .table > tbody > tr > td > span > span {
+  border: solid 2px var(--primary-dark);
+  margin: 0.1rem;
+  border-radius: 100%;
+}
+.content-holder {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  animation: unfold 0.5s ease-in;
+}
+
+/* End of table section */
+/* Main page styling end */
 /* Modal Styling */
 .modal {
   position: fixed;
@@ -215,8 +399,35 @@ textarea {
   display: block;
 }
 
+.active-row {
+  display: table-row !important;
+}
+
+tr.content-holder-row {
+  display: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--primary);
+  border: solid 1px rgb(223, 223, 223);
+}
+
+.table-striped > tbody > tr:nth-child(odd) {
+  background: rgb(255, 255, 255);
+}
 /* Keyframes */
 @keyframes unravel {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes unfold {
   from {
     opacity: 0.4;
   }
